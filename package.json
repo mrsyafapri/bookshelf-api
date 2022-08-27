@@ -1,20 +1,31 @@
 {
-  "name": "bookshelf-app-back-end",
+  "name": "bookshelf-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "./src/server.js",
+  "description": "A Bookshelf API using Hapi.js Framework",
+  "private": true,
   "scripts": {
-    "start": "node ./src/server.js",
-    "start-dev": "nodemon ./src/server.js",
-    "start-prod": "NODE_ENV=production node ./src/server.js",
+    "start": "node ./src/lib/server.js",
+    "start-dev": "nodemon ./src/lib/server.js",
+    "start-prod": "NODE_ENV=production node ./src/lib/server.js",
+    "test": "lab -v ./src/test/books.test.js",
     "lint": "eslint ./src"
   },
-  "engines": {
-    "node": "14.x"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrsyafapri/bookshelf-api.git"
   },
-  "author": "MRSyafapri",
+  "keywords": [],
+  "engines": {
+    "node": "16.x"
+  },
+  "author": "mrsyafapri",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrsyafapri/bookshelf-api/issues"
+  },
   "devDependencies": {
+    "@hapi/code": "^9.0.1",
+    "@hapi/lab": "^25.0.1",
     "eslint": "^7.24.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
